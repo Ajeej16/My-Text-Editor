@@ -1,0 +1,10 @@
+
+Hello,
+
+This is the demo for my text editor.
+
+Ctrl + S => Save
+Ctrl + F => Search
+Ctrl + N => New File
+Ctrl + 0 => Open File
+Escape => End Command

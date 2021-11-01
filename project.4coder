@@ -1,0 +1,41 @@
+version(1);
+project_name = "my_text_editor";
+
+patterns = {
+"*.c",
+"*.cpp",
+"*.h",
+"*.m",
+"*.mm",
+"*.bat",
+"*.sh",
+"*.4coder",
+"*.txt",
+};
+blacklist_patterns = {
+".*",
+};
+load_paths_custom = {
+ {"."},
+};
+load_paths = {
+ { load_paths_custom, .os = "win"  },
+};
+
+build = "win32_build.bat";
+debug = "win32_debug.bat";
+
+command_list = {
+ { .name = "build",
+   .out = "*compilation*", .footer_panel = true, .save_dirty_files = true,
+   .cmd = { {build, .os ="win"  }, }, 
+ },
+
+ { .name = "debug",
+   .out = "*compilation*", .footer_panel = true, .save_dirty_files = true,
+   .cmd = { {debug, .os ="win"  }, }, 
+ },
+};
+
+fkey_command[1] = "build";
+fkey_command[2] = "debug";
